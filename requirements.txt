@@ -1,0 +1,7 @@
+langchain==0.1.16
+langchain-community==0.0.32
+sentence-transformers==2.6.1
+transformers==4.36.2
+torch
+faiss-cpu
+python-docx

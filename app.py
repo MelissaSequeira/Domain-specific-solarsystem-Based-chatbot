@@ -71,12 +71,22 @@ qa = RetrievalQA.from_chain_type(
 app=Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
-def home():
-    answer=""
-    if request.method=="POST":
-        user_input=request.form["question"]
-        answer=qa.run(user_input)
-    return render_template("index.html", answer=answer)
+def index():
+    answer = ""
+    question = ""
+
+    if request.method == "POST":
+        question = request.form["question"]
+        answer = qa.run(question)
+
+    return render_template(
+        "index.html",
+        questionans=question,
+        answer=answer
+    )
+
 
 if __name__=="__main__":
     app.run(debug=True)
+
+

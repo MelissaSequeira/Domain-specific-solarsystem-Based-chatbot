@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="/static/style.css">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <div class="container">
+            <div class="heading"><img src="/static/download.jpg"><p>Solar.Ai</p></div>
+            <div class="chat-interface">
+
+    {% if questionans %}
+    <div class="user-msg">
+        {{ questionans }}
+    </div>
+    {% endif %}
+
+    {% if answer %}
+    <div class="bot-msg">
+        {{ answer }}
+    </div>
+    {% endif %}
+
+</div>
+
+
+<form class="input-area" method="POST">
+    <textarea name="question" placeholder="Ask here..." required></textarea>
+    <button type="submit">Send</button>
+</form>
+
+
+            <p>Powered by Solar.Ai</p>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>

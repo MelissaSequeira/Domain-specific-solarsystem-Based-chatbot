@@ -5,3 +5,4 @@ transformers==4.36.2
 torch
 faiss-cpu
 python-docx
+pytest
